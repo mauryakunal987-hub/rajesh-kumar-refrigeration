@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mauryakunal987-hub.github.io/rajesh-kumar-refrigeration/sitemap.xml
