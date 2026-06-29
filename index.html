@@ -790,7 +790,7 @@ Please provide me with more information and a quotation.`;
     const url =
 "https://wa.me/919936072321?text=" + encodeURIComponent(message);
 
-    window.open(url, "_blank");
+    window.location.href = url;
 
     closePopup();
 
@@ -827,7 +827,7 @@ ${message}`;
 
 window.open(
 "https://wa.me/919936072321?text="+encodeURIComponent(text),
-"_blank"
+url
 );
 
 }
