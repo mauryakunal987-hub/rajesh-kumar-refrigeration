@@ -35,7 +35,7 @@ transform:translateY(0);
       #topBtn{
     display:none;
     position:fixed;
-    bottom:25px;
+    bottom:95px;
     right:25px;
     z-index:999;
 
@@ -790,7 +790,9 @@ Please provide me with more information and a quotation.`;
     const url =
 "https://wa.me/919936072321?text=" + encodeURIComponent(message);
 
-    window.location.href = url;
+   window.location.assign(
+    "https://wa.me/919936072321?text=" + encodeURIComponent(message)
+);
 
     closePopup();
 
@@ -824,10 +826,8 @@ Service Required: ${service}
 
 Message:
 ${message}`;
-
-window.open(
-"https://wa.me/919936072321?text="+encodeURIComponent(text),
-url
+window.location.assign(
+    "https://wa.me/919936072321?text=" + encodeURIComponent(message)
 );
 
 }
