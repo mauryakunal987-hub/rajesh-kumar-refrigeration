@@ -878,6 +878,20 @@ observer.observe(section);
 
 });
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+});
+
+document.querySelectorAll(".fade-section").forEach((section) => {
+    observer.observe(section);
+});
+
 </script>
 
     <footer class="text-gray-600 body-font bg-gray-900 text-white">
