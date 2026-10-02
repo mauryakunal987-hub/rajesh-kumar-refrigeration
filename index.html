@@ -1,992 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Rajesh Kumar Refrigeration Works provides Cold Storage, Ice Factory, Refrigeration Installation, Repair and Maintenance Services.">
-    <meta name="keywords" content="Cold Storage, Ice Factory, Refrigeration, Accumulator, Automatic Level Controller">
-    <meta name="author" content="Rajesh Kumar Refrigeration Works">
-    <meta property="og:title" content="Rajesh Kumar Refrigeration Works">
-    <meta property="og:description" content="Cold Storage & Ice Factory Solutions">
-    <meta property="og:image" content="IMG_0578.jpeg">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://mauryakunal987-hub.github.io/rajesh-kumar-refrigeration/">
-    <meta property="og:url" content="https://mauryakunal987-hub.github.io/rajesh-kumar-refrigeration/">
-    <title>Rajesh Kumar Refrigeration Works | Cold Storage & Ice Factory Solutions</title>
-    <link rel="icon" type="image/jpeg" href="IMG_0578.jpeg">
-    <style>
-.fade-section{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:all .8s ease;
-
-}
-
-.fade-section.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-      
-      #topBtn{
-    display:none;
-    position:fixed;
-    bottom:95px;
-    right:25px;
-    z-index:999;
-
-    width:50px;
-    height:50px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#16a34a;
-    color:white;
-
-    font-size:22px;
-    cursor:pointer;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
-
-    transition:.3s;
-}
-
-#topBtn:hover{
-    background:#15803d;
-    transform:translateY(-3px);
-}
-
-html{
-    scroll-behavior:smooth;
-}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Rajesh Kumar Refrigeration Works provides Cold Storage, Ice Factory, Refrigeration Installation, Repair and Maintenance Services.">
+<meta name="keywords" content="Cold Storage, Ice Factory, Refrigeration, Accumulator, Automatic Level Controller">
+<meta name="author" content="Rajesh Kumar Refrigeration Works">
+<meta property="og:title" content="Rajesh Kumar Refrigeration Works">
+<meta property="og:description" content="Cold Storage & Ice Factory Solutions">
+<meta property="og:image" content="IMG_0578.jpeg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mauryakunal987-hub.github.io/rajesh-kumar-refrigeration/">
+<link rel="canonical" href="https://mauryakunal987-hub.github.io/rajesh-kumar-refrigeration/">
+<title>Rajesh Kumar Refrigeration Works | Cold Storage & Ice Factory Solutions</title>
+<link rel="icon" type="image/jpeg" href="IMG_0578.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1020;--ink:#f1f4ff;--mute:#aab4d4;--glass:rgba(255,255,255,.09);--edge:rgba(255,255,255,.22);--shadow:rgba(0,0,0,.35);--b1:#6a5cff;--b2:#19c3e6;--b3:#ff9a3d;--wa:#22c55e}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#e9eefc;--ink:#10172e;--mute:#47507a;--glass:rgba(255,255,255,.55);--edge:rgba(255,255,255,.85);--shadow:rgba(40,60,140,.18)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Outfit,system-ui,sans-serif;font-weight:800;line-height:1.05;margin:0}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--b2);outline-offset:3px}
+.blobs{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.blobs i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.7;animation:drift 20s ease-in-out infinite alternate}
+.blobs i:nth-child(1){width:46vmax;height:46vmax;background:var(--b1);left:-10vmax;top:-12vmax}
+.blobs i:nth-child(2){width:40vmax;height:40vmax;background:var(--b2);right:-12vmax;top:25vh;animation-duration:24s;animation-delay:-6s}
+.blobs i:nth-child(3){width:34vmax;height:34vmax;background:var(--b3);left:25vw;bottom:-18vmax;opacity:.5;animation-duration:28s;animation-delay:-11s}
+@keyframes drift{to{transform:translate(9vw,7vh) scale(1.2) rotate(40deg)}}
+.glass{position:relative;overflow:hidden;background:var(--glass);border:1px solid var(--edge);border-radius:24px;backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:0 18px 50px var(--shadow),inset 0 1px 0 var(--edge)}
+.glass::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%);transition:transform .9s}
+.glass:hover::before{transform:translateX(120%)}
+.tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out}
+.tilt::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:var(--glow,0);transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.22),transparent 60%)}
+.rv{opacity:0;transform:translateY(50px) scale(.96);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.in.tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out,opacity .8s}
+.wrap{padding:0 4vw}
+/* header */
+.top{position:sticky;top:max(12px,env(safe-area-inset-top,0px));z-index:20;margin:12px 4vw 0;padding:10px 22px;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:16px;animation:drop .9s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes drop{from{transform:translateY(-90px);opacity:0}}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--edge)}
+.brand b{display:block;font:800 18px/1.1 Outfit,sans-serif}
+.brand small{display:block;color:var(--mute);font-size:13px}
+.links{display:flex;gap:6px}
+.links a{text-decoration:none;font-weight:500;padding:8px 16px;border-radius:999px;transition:background .25s}
+.links a:hover{background:var(--glass)}
+#menu{display:none;border:1px solid var(--edge);background:var(--glass);color:var(--ink);width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;color:#fff;text-decoration:none;font:500 16px "DM Sans",sans-serif;border:0;cursor:pointer;background:linear-gradient(120deg,var(--b1),var(--b2));box-shadow:0 10px 30px rgba(106,92,255,.45);transition:transform .2s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 44px rgba(25,195,230,.6)}
+.btn.wa{background:linear-gradient(120deg,#16a34a,#22c55e);box-shadow:0 10px 30px rgba(34,197,94,.45)}
+.btn svg{width:22px;height:22px}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:center;padding:9vh 4vw 8vh}
+.hero h1{font-size:clamp(42px,7vw,92px);animation:rise 1s .2s both}
+.grad{background:linear-gradient(90deg,var(--b2),var(--b1),var(--b3),var(--b2));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 7s linear infinite}
+@keyframes flow{to{background-position:-250% 0}}
+@keyframes rise{from{transform:translateY(40px);opacity:0}}
+.hero p{max-width:52ch;color:var(--mute);margin:22px 0 30px;animation:rise 1s .4s both}
+.hero .btn{animation:rise 1s .6s both}
+.pic{position:relative;animation:bob 7s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-16px)}}
+.pic .glass{padding:12px}
+.pic img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+.chip{position:absolute;padding:10px 18px;border-radius:999px;font-weight:500;animation:bob 5s ease-in-out infinite}
+.chip.a{left:-6%;top:12%}.chip.b{right:-4%;bottom:14%;animation-delay:-2.5s}
+.pills{overflow:hidden;white-space:nowrap;padding:8px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.pills div{display:inline-block;animation:tick 34s linear infinite}
+.pills:hover div{animation-play-state:paused}
+.pills span{display:inline-block;margin:0 8px;padding:12px 26px;border-radius:999px;background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-weight:500}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:11vh 4vw 0}
+.head{margin-bottom:5vh;max-width:62ch}
+.head small{display:inline-block;margin-bottom:12px;padding:6px 16px;border-radius:999px;background:var(--glass);border:1px solid var(--edge);font:500 13px "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--b2)}
+.head h2{font-size:clamp(34px,5vw,60px)}
+.head p{color:var(--mute);margin:14px 0 0}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.card{padding:14px}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.card h3{font-size:26px;margin:20px 10px 10px}
+.card p{margin:0 10px 8px;color:var(--mute)}
+.card ol{margin:8px 10px 20px;padding-left:22px;color:var(--mute)}
+.card ol li{margin-bottom:6px}
+.card .btn{margin:6px 10px 12px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
+.duo{position:relative;height:min(520px,100vw)}
+.duo .glass{position:absolute;padding:10px;width:62%}
+.duo .glass:first-child{left:0;top:0}.duo .glass:last-child{right:0;bottom:0;animation:bob 6s ease-in-out infinite}
+.duo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.about h3{font:700 20px Outfit,sans-serif;color:var(--b2);margin-bottom:10px}
+.about h2{font-size:clamp(30px,4vw,48px);margin-bottom:18px}
+.about p{color:var(--mute);margin:0 0 14px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.why .glass{padding:28px 24px}
+.ico{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;margin-bottom:18px;background:linear-gradient(135deg,var(--b1),var(--b2));color:#fff;transition:transform .5s}
+.why .glass:hover .ico{transform:rotate(-12deg) scale(1.12)}
+.ico svg{width:28px;height:28px}
+.why h3{font-size:22px;margin-bottom:10px}
+.why p{margin:0;color:var(--mute);font-size:16px}
+.gal{columns:3;column-gap:22px}
+.gal figure{margin:0 0 22px;break-inside:avoid;padding:8px}
+.gal .im{overflow:hidden;border-radius:16px}
+.gal img{width:100%;transition:transform .7s}
+.gal figure:hover img{transform:scale(1.1)}
+.gal figcaption{padding:12px 8px 6px;font-weight:500}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+.contact .glass{padding:clamp(22px,4vw,40px)}
+.contact h2{font-size:30px;margin-bottom:20px}
+.info{margin-bottom:18px}
+.info h3{font:700 16px Outfit,sans-serif;color:var(--b2);margin-bottom:2px}
+.info a,.info p{margin:0;color:var(--ink);text-decoration:none}
+.info a:hover{text-decoration:underline}
+.note{padding:14px 16px;border-radius:16px;background:var(--glass);border:1px solid var(--edge);color:var(--mute);font-size:15px}
+form{display:grid;gap:14px}
+input,select,textarea{width:100%;padding:15px 18px;border-radius:16px;border:1px solid var(--edge);background:var(--glass);color:var(--ink);font:inherit;transition:box-shadow .3s,transform .3s}
+select option{color:#10172e}
+input::placeholder,textarea::placeholder{color:var(--mute)}
+input:focus,select:focus,textarea:focus{outline:0;transform:translateY(-2px);box-shadow:0 0 0 3px var(--b2),0 0 30px rgba(25,195,230,.4)}
+form small{color:var(--mute);font-size:13px}
+/* footer & floaters */
+footer{margin:11vh 4vw 4vh;padding:clamp(22px,4vw,40px)}
+.frow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.flinks{display:flex;flex-wrap:wrap;gap:6px}
+.flinks a{text-decoration:none;padding:6px 14px;border-radius:999px}
+.flinks a:hover{background:var(--glass)}
+footer hr{border:0;border-top:1px solid var(--edge);margin:22px 0}
+footer p{margin:2px 0;color:var(--mute);font-size:15px}
+footer .by span{color:var(--b2);font-weight:500}
+#wa{position:fixed;right:22px;bottom:max(22px,env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;background:var(--wa);animation:ring 2.4s infinite}
+#wa svg{width:30px;height:30px}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}100%{box-shadow:0 0 0 22px rgba(34,197,94,0)}}
+#up{position:fixed;right:30px;bottom:max(92px,calc(env(safe-area-inset-bottom,0px) + 92px));z-index:30;width:42px;height:42px;border-radius:50%;border:1px solid var(--edge);background:var(--glass);color:var(--ink);font-size:18px;cursor:pointer;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transform:translateY(14px);pointer-events:none;transition:.3s}
+#up.on{opacity:1;transform:none;pointer-events:auto}
+/* popup */
+#pop{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,8,20,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+#pop.open{display:flex}
+#pop .glass{width:min(460px,100%);padding:30px;animation:pop .45s cubic-bezier(.2,.9,.3,1.3)}
+@keyframes pop{from{transform:scale(.8) translateY(30px);opacity:0}}
+#pop h2{font-size:30px;margin-bottom:6px}
+#pop p{color:var(--mute);margin:0 0 18px}
+#x{position:absolute;right:16px;top:12px;border:0;background:none;color:var(--ink);font-size:30px;cursor:pointer}
+@media (max-width:900px){.hero,.about,.contact{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.gal{columns:2}.pic{max-width:420px}}
+@media (max-width:640px){#menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:calc(100% + 10px);flex-direction:column;padding:14px;border-radius:24px;background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}.links.open{display:flex}.grid2,.why{grid-template-columns:1fr}.gal{columns:1}.brand small{display:none}.chip.a{left:0}.chip.b{right:0}}
+@media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
 
-
-    <header class="text-gray-700 body-font bg-white shadow-md sticky top-0 z-50">
-  <div class="container mx-auto flex flex-nowrap items-center justify-between px-8 py-0.5">
-
-    <!-- Logo & Company Name -->
-    <a href="#home" class="flex items-center text-gray-900 flex-shrink-0">
-
-      <img
-        src="https://i.ibb.co/4ZJ1ZKwD/Chat-GPT-Image-Jun-27-2026-at-02-13-34-PM.png"
-        alt="Rajesh Kumar Refrigeration Works"
-        class="w-10 h-10 object-contain mr-2"
-        style="width:60px;height:60px;">      
-
-      <div>
-        <h1 class="text-lg font-bold leading-tight tracking-tight">
-          Rajesh Kumar Refrigeration Works
-        </h1>
-
-        <p class="text-gray-500 text-sm mt-1">
-          Cold Storage & Ice Factory Solutions
-        </p>
-      </div>
-
-    </a>
-
-    <!-- Navigation -->
-    <nav class="flex flex-nowrap items-center whitespace-nowrap space-x-5 text-sm font-medium">
-
-      <a href="#home"
-         class="hover:text-blue-600 transition-all duration-200">
-        Home
-      </a>
-
-      <a href="#services"
-         class="hover:text-blue-600 transition-all duration-200">
-        Services
-      </a>
-
-      <a href="#gallery"
-         class="hover:text-blue-600 transition-all duration-200">
-        Gallery
-      </a>
-
-      <a href="#about"
-         class="hover:text-blue-600 transition-all duration-200">
-        About
-      </a>
-
-      <a href="#contact"
-         class="hover:text-blue-600 transition-all duration-200">
-        Contact
-      </a>
-  
-
-    </nav>
-
-  </div>
+<header class="top glass">
+  <a class="brand" href="#home"><img src="https://i.ibb.co/4ZJ1ZKwD/Chat-GPT-Image-Jun-27-2026-at-02-13-34-PM.png" alt="Rajesh Kumar Refrigeration Works"><span><b>Rajesh Kumar Refrigeration Works</b><small>Cold Storage &amp; Ice Factory Solutions</small></span></a>
+  <button id="menu" type="button" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  <nav class="links" id="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
 </header>
 
+<main>
+<section class="hero" id="home" style="padding-top:9vh">
+  <div>
+    <h1>Cold Storage &amp; <span class="grad">Ice Factory</span> Solutions</h1>
+    <p>From complete cold storage and ice factory installations to maintenance, repairs, and system upgrades, we deliver dependable refrigeration solutions with a commitment to quality, efficiency, and long-term performance. Contact us today for expert assistance.</p>
+    <a class="btn wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/919936072321?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Cold%20Storage%20or%20Ice%20Factory%20installation%2C%20repair%20or%20maintenance."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.83 11.83 0 0012.04 0C5.4 0 .04 5.36.04 12c0 2.11.55 4.18 1.6 6.01L0 24l6.16-1.62A11.97 11.97 0 0012.04 24C18.68 24 24 18.64 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.04 21.8c-1.87 0-3.7-.5-5.3-1.45l-.38-.22-3.65.96.97-3.56-.24-.37A9.72 9.72 0 012.3 12c0-5.37 4.37-9.74 9.74-9.74 2.6 0 5.05 1.01 6.89 2.85A9.68 9.68 0 0121.78 12c0 5.37-4.37 9.8-9.74 9.8z"/></svg>WhatsApp Us</a>
+  </div>
+  <div class="pic">
+    <div class="glass tilt"><img src="https://i.ibb.co/mZT01Y1/manik.jpg" alt="Cold storage work by Rajesh Kumar Refrigeration Works"></div>
+    <span class="chip glass a">Cold Storage</span><span class="chip glass b">Ice Factory</span>
+  </div>
+</section>
 
+<div class="pills" aria-hidden="true"><div>
+<span>Cold storage installation</span><span>Ice factory setup</span><span>Ammonia pipeline work</span><span>Automatic level controllers</span><span>Bunker coil accumulators</span><span>Repair &amp; maintenance</span><span>Annual maintenance contracts</span>
+<span>Cold storage installation</span><span>Ice factory setup</span><span>Ammonia pipeline work</span><span>Automatic level controllers</span><span>Bunker coil accumulators</span><span>Repair &amp; maintenance</span><span>Annual maintenance contracts</span>
+</div></div>
 
-    <section class="text-gray-600 body-font" id="home" class="scroll-mt-24"  class="fade-section">
-  <div class="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Cold Storage & Ice Factory Solutions
-        <br class="hidden lg:inline-block">
-      </h1>
-      <p class="mb-8 leading-relaxed">
-  From complete cold storage and ice factory installations to maintenance, repairs, and system upgrades, we deliver dependable refrigeration solutions with a commitment to quality, efficiency, and long-term performance. Contact us today for expert assistance.
-</p>
-      <div class="flex justify-center">
-        <a href="https://wa.me/919936072321?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Cold%20Storage%20or%20Ice%20Factory%20installation%2C%20repair%20or%20maintenance."
-   target="_blank"
-   rel="noopener noreferrer"
-   class="inline-flex items-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+<section id="services">
+  <div class="head rv"><small>Services</small><h2>Level control that protects your plant</h2></div>
+  <div class="grid2">
+    <article class="glass tilt card rv">
+      <img loading="lazy" src="https://i.ibb.co/1YbhzdwT/Video-Capture-20260626-204035.jpg" alt="Accumulator with automatic level controller">
+      <h3>Accumulator with Automatic Level Controller</h3>
+      <p>By installing an automatic level controller, it offers the following benefits:</p>
+      <ol><li>Protects the compressor by preventing liquid refrigerant from entering it, reducing the risk of damage.</li><li>Saves electricity by improving the system's overall efficiency.</li><li>Speeds up ice production for faster ice-making cycles.</li><li>Reduces maintenance with automatic operation and less manual monitoring.</li></ol>
+      <button class="btn" type="button" data-service="Accumulator with Automatic Level Controller">💬 Get Installation Quote</button>
+    </article>
+    <article class="glass tilt card rv">
+      <img loading="lazy" src="https://i.ibb.co/zT2cR7yP/IMG-0479.jpg" alt="Bunker coil accumulator with automatic level controller">
+      <h3>Bunker Coil Accumulator with Automatic Level Controller</h3>
+      <p>Installing an automatic level controller provides the following benefits:</p>
+      <ol><li>Protects the compressor by preventing liquid refrigerant from entering it, reducing the risk of damage.</li><li>Saves electricity by improving the system's overall efficiency.</li><li>Improves cooling performance by increasing the cooling speed of the chamber.</li><li>Reduces maintenance with automatic operation and less manual monitoring.</li></ol>
+      <button class="btn" type="button" data-service="Bunker Coil Accumulator with Automatic Level Controller Installation">💬 Get Installation Quote</button>
+    </article>
+  </div>
+</section>
 
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 24 24"
-       fill="currentColor"
-       class="w-5 h-5 mr-2">
-    <path d="M20.52 3.48A11.83 11.83 0 0012.04 0C5.4 0 .04 5.36.04 12c0 2.11.55 4.18 1.6 6.01L0 24l6.16-1.62A11.97 11.97 0 0012.04 24C18.68 24 24 18.64 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.04 21.8c-1.87 0-3.7-.5-5.3-1.45l-.38-.22-3.65.96.97-3.56-.24-.37A9.72 9.72 0 012.3 12c0-5.37 4.37-9.74 9.74-9.74 2.6 0 5.05 1.01 6.89 2.85A9.68 9.68 0 0121.78 12c0 5.37-4.37 9.8-9.74 9.8z"/>
-  </svg>
-
-  WhatsApp Us
-</a>
-      </div>
+<section id="about">
+  <div class="head rv"><small>About Us</small></div>
+  <div class="about">
+    <div class="duo rv">
+      <div class="glass tilt"><img loading="lazy" src="https://i.ibb.co/mZT01Y1/manik.jpg" alt="Cold storage installation"></div>
+      <div class="glass tilt"><img loading="lazy" src="https://i.ibb.co/tp6jSGFx/20240616-111037.jpg" alt="Ice factory project"></div>
     </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img class="object-cover object-center rounded" alt="hero" src="https://i.ibb.co/mZT01Y1/manik.jpg" alt="manik" border="0"">
+    <div class="rv">
+      <h3>Rajesh Kumar Refrigeration Works</h3>
+      <h2>Trusted Experts in Cold Storage &amp; Ice Factory Solutions</h2>
+      <p>Rajesh Kumar Refrigeration Works specializes in cold storage installation, ice factory setup, industrial refrigeration maintenance, repair, and complete refrigeration solutions for commercial and industrial clients.</p>
+      <p>We undertake ammonia pipeline work, automatic level controllers, bunker coil accumulators, refrigeration equipment installation, preventive maintenance, and system upgrades using industry best practices.</p>
+      <p>Our goal is to provide dependable, energy-efficient, and long-lasting refrigeration systems while maintaining the highest standards of quality, safety, and customer satisfaction.</p>
+      <a class="btn" href="#contact">Contact Us</a>
     </div>
   </div>
 </section>
 
-
-<div class="container mx-auto px-5">
-  <hr class="border-gray-200">
-</div>
-
-
-<section class="text-gray-600 body-font" id="services"  class="scroll-mt-24" class="fade-section" >
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -mx-4 -mb-10 text-center">
-      <div class="sm:w-1/2 mb-10 px-4">
-        <div class="rounded-lg h-64 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/1YbhzdwT/Video-Capture-20260626-204035.jpg">
-        </div>
-        <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">Accumulator with Automatic Level Controller</h2>
-        <p class="leading-relaxed text-base">By installing an automatic level controller, it offers the following benefits:<br>
-1.Protects the compressor by preventing liquid refrigerant from entering it, reducing the risk of damage.<br>
-2.Saves electricity by improving the system's overall efficiency.<br>
-3.Speeds up ice production for faster ice-making cycles.<br>
-4.Reduces maintenance with automatic operation and less manual monitoring.</p>
-
-   <div class="mt-8">
-    <button
-        onclick="openPopup('Accumulator with Automatic Level Controller')"
-        class="inline-flex text-white bg-green-600 hover:bg-green-700 py-2 px-6 rounded-lg">
-
-        💬 Get Installation Quote
-
-    </button>
-</div>     
-
-      </div>
-      <div class="sm:w-1/2 mb-10 px-4">
-        <div class="rounded-lg h-64 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/zT2cR7yP/IMG-0479.jpg" alt="20240123 152648">
-        </div>
-        <h2 class="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">Bunker Coil Accumulator with Automatic Level Controller</h2>
-        <p class="leading-relaxed text-base">Installing an automatic level controller provides the following benefits:<br>1.Protects the compressor by preventing liquid refrigerant from entering it, reducing the risk of damage.<br>
-2.Saves electricity by improving the system's overall efficiency.<br>3.Improves cooling performance by increasing the cooling speed of the chamber.<br>4.Reduces maintenance with automatic operation and less manual monitoring.
-        <div class="mt-8">
-    <button
-        onclick="openPopup('Bunker Coil Accumulator with Automatic Level Controller Installation')"
-        class="inline-flex text-white bg-green-600 hover:bg-green-700 py-2 px-6 rounded-lg">
-
-        💬 Get Installation Quote
-
-    </button>
-</div>  
-      </div>
-
-
-      <div class="sm:w-1/2 mb-10 px-4">
-
-
-
-
-      
-
-      
-    </div>
-  </div>
-
-  
-</section>
-
-<div class="container mx-auto px-5">
-  <hr class="border-gray-200">
-</div>
-
-    
-<section class="text-gray-600 body-font" id="about" class="scroll-mt-24" class="fade-section" >
-
-  <div class="container mx-auto px-5 py-20">
-
-    <!-- Section Heading -->
-    <div class="text-center mb-14">
-      <h2 class="text-4xl font-bold text-gray-900">
-        About Us
-      </h2>
-
-      <div class="w-20 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
-    </div>
-
-    <!-- About Content -->
-    <div class="flex md:flex-row flex-col items-center">
-
-      <!-- Images -->
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-
-        <img
-          class="object-cover object-center rounded-xl shadow-lg h-64 w-full mb-5"
-          alt="Cold Storage Installation"
-          src="https://i.ibb.co/mZT01Y1/manik.jpg">
-
-        <img
-          class="object-cover object-center rounded-xl shadow-lg h-64 w-full"
-          alt="Ice Factory Project"
-          src="https://i.ibb.co/tp6jSGFx/20240616-111037.jpg">
-
-      </div>
-
-      <!-- Text -->
-      <div class="lg:flex-grow md:w-1/2 lg:pl-20 md:pl-12 flex flex-col md:items-start md:text-left items-center text-center">
-
-        <h2 class="text-indigo-600 font-semibold tracking-widest uppercase mb-2">
-          Rajesh Kumar Refrigeration Works
-        </h2>
-
-        <h1 class="title-font sm:text-4xl text-3xl mb-6 font-bold text-gray-900">
-          Trusted Experts in Cold Storage & Ice Factory Solutions
-        </h1>
-
-        <p class="mb-5 leading-relaxed">
-          Rajesh Kumar Refrigeration Works specializes in cold storage installation,
-          ice factory setup, industrial refrigeration maintenance, repair, and complete refrigeration solutions for commercial and industrial clients.
-        </p>
-
-        <p class="mb-5 leading-relaxed">
-          We undertake ammonia pipeline work, automatic level controllers, bunker coil accumulators, refrigeration equipment installation, preventive maintenance, and system upgrades using industry best practices.
-        </p>
-
-        <p class="mb-8 leading-relaxed">
-          Our goal is to provide dependable, energy-efficient, and long-lasting refrigeration systems while maintaining the highest standards of quality, safety, and customer satisfaction.
-        </p>
-
-        <a href="#contact">
-          <button class="inline-flex text-white bg-indigo-600 border-0 py-3 px-8 focus:outline-none hover:bg-indigo-700 rounded-lg text-lg transition">
-            Contact Us
-          </button>
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-    <div class="container mx-auto px-5">
-  <hr class="border-gray-200">
-</div>
-
-    
-  <section class="text-gray-600 body-font" id="why-us" class="fade-section" >
-  <div class="container px-5 py-20 mx-auto">
-
-    <!-- Heading -->
-    <div class="text-center mb-16">
-      <h2 class="text-indigo-600 font-semibold tracking-widest uppercase">
-        WHY CHOOSE US
-      </h2>
-
-      <h1 class="text-4xl font-bold text-gray-900 mt-2">
-        Why Businesses Trust Rajesh Kumar Refrigeration Works
-      </h1>
-
-      <p class="lg:w-2/3 mx-auto mt-4 leading-relaxed text-gray-600">
-        Delivering dependable industrial refrigeration solutions with quality workmanship,
-        timely service, and complete customer satisfaction.
-      </p>
-    </div>
-
-    <!-- Cards -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-
-      <!-- Card 1 -->
-      <div class="bg-blue-50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 p-8 text-center">
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-indigo-600 mx-auto mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M4.93 6l14.14 12M4.93 18L19.07 6M2 12h20"/>
-        </svg>
-
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">
-          Refrigeration Expertise
-        </h3>
-
-        <p class="leading-relaxed">
-          Specialized knowledge in industrial refrigeration systems, cold storage plants, and ice factory installations.
-        </p>
-
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-blue-50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 p-8 text-center">
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-indigo-600 mx-auto mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V9l5 3V9l5 3V5l4 2v14"/>
-        </svg>
-
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">
-          Complete Solutions
-        </h3>
-
-        <p class="leading-relaxed">
-          From planning and installation to upgrades and maintenance, we handle every stage of your refrigeration project.
-        </p>
-
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-blue-50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 p-8 text-center">
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-indigo-600 mx-auto mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 01-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4L14 12"/>
-        </svg>
-
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">
-          Repair & Maintenance
-        </h3>
-
-        <p class="leading-relaxed">
-          Fast troubleshooting, preventive maintenance, and dependable after-service to keep your systems running efficiently.
-        </p>
-
-      </div>
-
-      <!-- Card 4 -->
-      <div class="bg-blue-50 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 p-8 text-center">
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 text-indigo-600 mx-auto mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
-        </svg>
-
-        <h3 class="text-xl font-semibold text-gray-900 mb-3">
-          Reliable & Trusted
-        </h3>
-
-        <p class="leading-relaxed">
-          Honest advice, quality workmanship, and long-term support that businesses can rely on.
-        </p>
-
-      </div>
-
-    </div>
-
+<section id="why-us">
+  <div class="head rv"><small>Why choose us</small><h2>Why Businesses Trust Rajesh Kumar Refrigeration Works</h2><p>Delivering dependable industrial refrigeration solutions with quality workmanship, timely service, and complete customer satisfaction.</p></div>
+  <div class="why">
+    <div class="glass tilt rv"><div class="ico"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M4.93 6l14.14 12M4.93 18L19.07 6M2 12h20"/></svg></div><h3>Refrigeration Expertise</h3><p>Specialized knowledge in industrial refrigeration systems, cold storage plants, and ice factory installations.</p></div>
+    <div class="glass tilt rv"><div class="ico"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V9l5 3V9l5 3V5l4 2v14"/></svg></div><h3>Complete Solutions</h3><p>From planning and installation to upgrades and maintenance, we handle every stage of your refrigeration project.</p></div>
+    <div class="glass tilt rv"><div class="ico"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 01-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4L14 12"/></svg></div><h3>Repair &amp; Maintenance</h3><p>Fast troubleshooting, preventive maintenance, and dependable after-service to keep your systems running efficiently.</p></div>
+    <div class="glass tilt rv"><div class="ico"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></svg></div><h3>Reliable &amp; Trusted</h3><p>Honest advice, quality workmanship, and long-term support that businesses can rely on.</p></div>
   </div>
 </section>
 
-
-
-<div class="container mx-auto px-5">
-  <hr class="border-gray-200">
-</div>
-
-
-   <section class="text-gray-600 body-font" id="gallery" class="fade-section">
-  <div class="container px-5 py-20 mx-auto">
-
-    <!-- Heading -->
-    <div class="text-center mb-14">
-      <h2 class="text-4xl font-bold text-gray-900">
-        Our Gallery
-      </h2>
-
-      <div class="w-20 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
-
-      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-        Take a look at some of our completed cold storage, ice factory, and industrial refrigeration projects.
-      </p>
-    </div>
-
-    <!-- Gallery -->
-    <div class="flex flex-wrap -m-2">
-
-      <!-- Left Column -->
-      <div class="flex flex-wrap w-1/2">
-
-        <!-- Image 1 -->
-        <div class="w-1/2 p-2">
-          <div class="overflow-hidden rounded-xl shadow-lg bg-white">
-            <img
-              src="https://i.ibb.co/4ZB2P99c/Video-Capture-20260628-214252.jpg"
-              class="h-48 w-full object-cover hover:scale-105 transition duration-300"
-              alt="Gallery Image">
-            <p class="text-center py-3 font-medium text-gray-800">
-              LPR Leavel Controller
-            </p>
-          </div>
-        </div>
-
-        <!-- Image 2 -->
-        <div class="w-1/2 p-2">
-          <div class="overflow-hidden rounded-xl shadow-lg bg-white">
-            <img
-              src="https://i.ibb.co/rBCpzF2/IMG-20250503-WA0002.jpg"
-              class="h-48 w-full object-cover hover:scale-105 transition duration-300"
-              alt="Gallery Image">
-            <p class="text-center py-3 font-medium text-gray-800">
-              Selfe Made Control Pannel for Leavel Controller
-            </p>
-          </div>
-        </div>
-
-        <!-- Image 3 -->
-        <div class="w-full p-2">
-          <div class="overflow-hidden rounded-xl shadow-lg bg-white">
-            <img
-              src="https://i.ibb.co/Nd5LfG42/20230807-180153.jpg"
-              class="h-72 w-full object-cover hover:scale-105 transition duration-300"
-              alt="Gallery Image">
-            <p class="text-center py-3 font-medium text-gray-800">
-              Industrial Refrigeration Plant
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Right Column -->
-      <div class="flex flex-wrap w-1/2">
-
-        <!-- Image 4 -->
-        <div class="w-full p-2">
-          <div class="overflow-hidden rounded-xl shadow-lg bg-white">
-            <img
-              src="https://i.ibb.co/rKC9TGCd/20250113-130433.avif"
-              class="h-72 w-full object-cover hover:scale-105 transition duration-300"
-              alt="Gallery Image">
-            <p class="text-center py-3 font-medium text-gray-800">
-              Condensor Installation
-            </p>
-          </div>
-        </div>
-
-        <!-- Image 5 -->
-        <div class="w-1/2 p-2">
-          <div class="overflow-hidden rounded-xl shadow-lg bg-white">
-            <img
-              src="https://i.ibb.co/wZy85jKG/20240526-160906.jpg"
-              class="h-48 w-full object-cover hover:scale-105 transition duration-300"
-              alt="Gallery Image">
-            <p class="text-center py-3 font-medium text-gray-800">
-              L.P.R. setup
-            </p>
-          </div>
-        </div>
-
-        <!-- Image 6 -->
-        <div class="w-1/2 p-2">
-          <div class="overflow-hidden rounded-xl shadow-lg bg-white">
-            <img
-              src="https://i.ibb.co/sMXgHPv/Video-Capture-20260626-202533.jpg"
-              class="h-48 w-full object-cover hover:scale-105 transition duration-300"
-              alt="Gallery Image">
-            <p class="text-center py-3 font-medium text-gray-800">
-              Ammonia Pipeline
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
+<section id="gallery">
+  <div class="head rv"><small>Gallery</small><h2>Our Gallery</h2><p>Take a look at some of our completed cold storage, ice factory, and industrial refrigeration projects.</p></div>
+  <div class="gal">
+    <figure class="glass tilt rv"><div class="im"><img loading="lazy" src="https://i.ibb.co/4ZB2P99c/Video-Capture-20260628-214252.jpg" alt="LPR level controller"></div><figcaption>LPR Level Controller</figcaption></figure>
+    <figure class="glass tilt rv"><div class="im"><img loading="lazy" src="https://i.ibb.co/rKC9TGCd/20250113-130433.avif" alt="Condenser installation"></div><figcaption>Condenser Installation</figcaption></figure>
+    <figure class="glass tilt rv"><div class="im"><img loading="lazy" src="https://i.ibb.co/rBCpzF2/IMG-20250503-WA0002.jpg" alt="Self-made control panel for level controller"></div><figcaption>Self-made Control Panel for Level Controller</figcaption></figure>
+    <figure class="glass tilt rv"><div class="im"><img loading="lazy" src="https://i.ibb.co/wZy85jKG/20240526-160906.jpg" alt="L.P.R. setup"></div><figcaption>L.P.R. Setup</figcaption></figure>
+    <figure class="glass tilt rv"><div class="im"><img loading="lazy" src="https://i.ibb.co/Nd5LfG42/20230807-180153.jpg" alt="Industrial refrigeration plant"></div><figcaption>Industrial Refrigeration Plant</figcaption></figure>
+    <figure class="glass tilt rv"><div class="im"><img loading="lazy" src="https://i.ibb.co/sMXgHPv/Video-Capture-20260626-202533.jpg" alt="Ammonia pipeline"></div><figcaption>Ammonia Pipeline</figcaption></figure>
   </div>
-</section> 
-
-<div class="container mx-auto px-5">
-  <hr class="border-gray-200">
-</div>
-
-
-
-    
-
-<section class="text-gray-600 body-font" id="contact" class="fade-section">
-
-  <div class="container px-5 py-20 mx-auto">
-
-    <!-- Heading -->
-    <div class="text-center mb-16">
-
-      <h2 class="text-4xl font-bold text-gray-900">
-        Contact Us
-      </h2>
-
-      <div class="w-20 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
-
-      <p class="mt-4 text-lg text-gray-600">
-        Looking for installation, repair, maintenance or an upgrade?
-        We'd be happy to assist you.
-      </p>
-
-    </div>
-
-    <!-- Contact Layout -->
-    <div class="flex flex-col md:flex-row gap-8">
-
-      <!-- LEFT CARD -->
-      <div class="md:w-2/5">
-
-        <div class="bg-gray-100 rounded-2xl shadow-lg p-8 h-full">
-
-          <h2 class="text-2xl font-bold text-gray-900 mb-8">
-            Get In Touch
-          </h2>
-
-          <div class="mb-6">
-            <h3 class="font-semibold text-lg">📞 Phone</h3>
-            <a href="tel:+919936072321" class="text-indigo-600 hover:underline">
-              +91 99360 72321
-            </a>
-          </div>
-
-          <div class="mb-6">
-            <h3 class="font-semibold text-lg">💬 WhatsApp</h3>
-            <a href="https://wa.me/919936072321" target="_blank" class="text-green-600 hover:underline">
-              Chat on WhatsApp
-            </a>
-          </div>
-
-          <div class="mb-6">
-            <h3 class="font-semibold text-lg">📧 Email</h3>
-            <a href="mailto:" class="text-indigo-600 hover:underline">
-              rajeshkumar64379@gmail.com
-            </a>
-          </div>
-
-          <div class="mb-6">
-            <h3 class="font-semibold text-lg">📍 Address</h3>
-            <p>Shahabad Cold Storage,Dariya Pur Road , Shababad [HARDOI] </p>
-          </div>
-
-          <div class="mb-6">
-            <h3 class="font-semibold text-lg">🕒 Working Hours</h3>
-            <p>All Days</p>
-            <p>10:00 AM - 8:00 PM</p>
-          </div>
-
-          <div class="mt-8 bg-green-50 border border-green-200 rounded-lg p-4">
-            <p class="text-green-700 font-medium">
-              ✅ Free consultation available for installation and project enquiries.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT CARD -->
-      <div class="md:w-3/5">
-
-        <div class="bg-white rounded-2xl shadow-lg p-8">
-
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">
-            Send an Enquiry
-          </h2>
-
-          <form onsubmit="contactWhatsapp(event)">
-
-            <input
-              id="contactName"
-              type="text"
-              required
-              placeholder="Full Name"
-              class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500">
-
-            <input
-              id="contactPhone"
-              type="tel"
-              required
-              placeholder="Phone Number"
-              class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500">
-
-            <input
-              id="contactCity"
-              type="text"
-              placeholder="City / Address (Optional)"
-              class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500">
-
-            <select
-              id="contactService"
-              class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500">
-
-              <option>Cold Storage Installation</option>
-              <option>Ice Factory Installation</option>
-              <option>Cold Storage Repair</option>
-              <option>Cold Storage Maintenance</option>
-              <option>Ammonia Pipeline Work</option>
-              <option>System Upgrade</option>
-              <option>Annual Maintenance Contract (AMC)</option>
-              <option>Other</option>
-
-            </select>
-
-            <textarea
-              id="contactMessage"
-              rows="5"
-              placeholder="Tell us about your requirement..."
-              class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 mb-6 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-
-            <button
-              type="submit"
-              class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-lg transition">
-
-              💬 Send on WhatsApp
-
-            </button>
-
-            <p class="text-xs text-center text-gray-500 mt-4">
-              We only use your information to contact you regarding your enquiry.
-            </p>
-
-          </form>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
 
-
-    
-
-<!-- Service Enquiry Popup -->
-<div id="servicePopup" class="fixed inset-0 hidden items-center justify-center z-50 bg-white/20 backdrop-blur-md">
-
-  <div class="bg-white rounded-2xl shadow-2xl border border-gray-200 w-11/12 max-w-md p-8 relative">
-
-    <!-- Close -->
-    <button
-      onclick="closePopup()"
-      class="absolute top-3 right-4 text-3xl text-gray-500 hover:text-red-500">
-      &times;
-    </button>
-
-    <h2 class="text-2xl font-bold text-center text-gray-900">
-      Service Enquiry
-    </h2>
-
-    <p class="text-center text-gray-500 mt-2 mb-6">
-      Fill in your details and continue on WhatsApp.
-    </p>
-
-    <form onsubmit="sendToWhatsapp(event)">
-
-      <input
-        id="customerName"
-        type="text"
-        placeholder="Full Name"
-        required
-        class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-2 focus:ring-green-500 focus:outline-none">
-
-      <input
-        id="customerPhone"
-        type="tel"
-        placeholder="Phone Number"
-        required
-        class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-2 focus:ring-green-500 focus:outline-none">
-
-      <input
-        id="customerCity"
-        type="text"
-        placeholder="City / Address (Optional)"
-        class="w-full border border-gray-300 rounded-lg p-3 mb-5 focus:ring-2 focus:ring-green-500 focus:outline-none">
-
-      <input
-        type="hidden"
-        id="selectedService">
-
-      <button
-        type="submit"
-        class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-lg transition">
-
-        💬 Open Whatsapp & Send 
-
-      </button>
-
-      <p class="text-xs text-center text-gray-500 mt-4">
-        Your information is only used to contact you regarding your enquiry.
-      </p>
-
-    </form>
-
-  </div>
-
-</div>
-
-
-<script>
-
-function openPopup(service){
-
-    document.getElementById("selectedService").value = service;
-
-    document.getElementById("servicePopup").classList.remove("hidden");
-    document.getElementById("servicePopup").classList.add("flex");
-
-}
-
-function closePopup(){
-
-    document.getElementById("servicePopup").classList.add("hidden");
-    document.getElementById("servicePopup").classList.remove("flex");
-
-}
-
-function sendToWhatsapp(e){
-
-    e.preventDefault();
-
-    const name = document.getElementById("customerName").value;
-    const phone = document.getElementById("customerPhone").value;
-    const city = document.getElementById("customerCity").value;
-    const service = document.getElementById("selectedService").value;
-
-    const message =
-`Hello Rajesh Kumar Refrigeration Works,
-
-Name: ${name}
-
-Phone: ${phone}
-
-City / Address: ${city || "Not Provided"}
-
-Service Required: ${service}
-
-Please provide me with more information and a quotation.`;
-
-    const url =
-"https://wa.me/919936072321?text=" + encodeURIComponent(message);
-
-   window.location.assign(
-    "https://wa.me/919936072321?text=" + encodeURIComponent(message)
-);
-
-    closePopup();
-
-}
-
-
-
-  function contactWhatsapp(event){
-
-event.preventDefault();
-
-const name=document.getElementById("contactName").value;
-
-const phone=document.getElementById("contactPhone").value;
-
-const city=document.getElementById("contactCity").value || "Not Provided";
-
-const service=document.getElementById("contactService").value;
-
-const message=document.getElementById("contactMessage").value || "No additional message.";
-
-const text=`Hello Rajesh Kumar Refrigeration Works,
-
-Name: ${name}
-
-Phone: ${phone}
-
-City / Address: ${city}
-
-Service Required: ${service}
-
-Message:
-${message}`;
-window.location.assign(
-    "https://wa.me/919936072321?text=" + encodeURIComponent(message)
-);
-
-}
-
-  window.onscroll=function(){
-
-if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
-
-document.getElementById("topBtn").style.display="block";
-
-}else{
-
-document.getElementById("topBtn").style.display="none";
-
-}
-
-};
-
-function topFunction(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-}
-
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
-});
-
-document.querySelectorAll(".fade-section").forEach((section) => {
-    observer.observe(section);
-});
-
-</script>
-
-    <footer class="text-gray-600 body-font bg-gray-900 text-white">
-
-  <div class="container px-5 py-10 mx-auto">
-
-    <div class="flex flex-col md:flex-row justify-between items-center">
-
-      <!-- Logo & Company -->
-      <div class="flex items-center mb-6 md:mb-0">
-
-        <img
-          src="https://i.ibb.co/4ZJ1ZKwD/Chat-GPT-Image-Jun-27-2026-at-02-13-34-PM.png"
-          alt="Rajesh Kumar Refrigeration Works"
-          class="w-16 h-16 object-contain mr-4">
-
-        <div>
-
-          <h2 class="text-2xl font-bold text-white">
-            Rajesh Kumar Refrigeration Works
-          </h2>
-
-          <p class="text-gray-400">
-            Cold Storage & Ice Factory Solutions
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- Navigation -->
-      <div class="flex flex-wrap justify-center gap-6 text-gray-300">
-
-        <a href="#home" class="hover:text-green-400 transition">Home</a>
-
-        <a href="#services" class="hover:text-green-400 transition">Services</a>
-
-        <a href="#about" class="hover:text-green-400 transition">About</a>
-
-        <a href="#gallery" class="hover:text-green-400 transition">Gallery</a>
-
-        <a href="#contact" class="hover:text-green-400 transition">Contact</a>
-
-      </div>
-
+<section id="contact">
+  <div class="head rv"><small>Contact</small><h2>Contact Us</h2><p>Looking for installation, repair, maintenance or an upgrade? We'd be happy to assist you.</p></div>
+  <div class="contact">
+    <div class="glass rv">
+      <h2>Get In Touch</h2>
+      <div class="info"><h3>📞 Phone</h3><a href="tel:+919936072321">+91 99360 72321</a></div>
+      <div class="info"><h3>💬 WhatsApp</h3><a href="https://wa.me/919936072321" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
+      <div class="info"><h3>📧 Email</h3><a href="mailto:rajeshkumar64379@gmail.com">rajeshkumar64379@gmail.com</a></div>
+      <div class="info"><h3>📍 Address</h3><p>Shahabad Cold Storage, Dariya Pur Road, Shahabad [HARDOI]</p></div>
+      <div class="info"><h3>🕒 Working Hours</h3><p>All Days<br>10:00 AM - 8:00 PM</p></div>
+      <div class="note">✅ Free consultation available for installation and project enquiries.</div>
     </div>
-
-    <!-- Divider -->
-    <hr class="border-gray-700 my-8">
-
-    <!-- Bottom -->
-    <div class="flex flex-col md:flex-row justify-between items-center">
-
-      <div class="text-gray-400 text-center md:text-left">
-
-        <p>
-          📞
-          <a href="tel:+919936072321" class="hover:text-green-400">
-            +91 99360 72321
-          </a>
-        </p>
-
-        <p class="mt-2">
-          💬
-          <a href="https://wa.me/919936072321"
-             target="_blank"
-             class="hover:text-green-400">
-            Chat on WhatsApp
-          </a>
-        </p>
-
-      </div>
-
-      <div class="text-gray-400 text-center mt-6 md:mt-0">
-
-        <p>
-          © 2026 Rajesh Kumar Refrigeration Works.
-        </p>
-
-        <p class="mt-2 text-sm">
-          All Rights Reserved.
-        </p>
-
-        <p class="mt-2 text-sm">
-          Designed & Developed by <span class="text-green-400 font-semibold">Kunal Maurya</span>
-        </p>
-
-      </div>
-
+    <div class="glass rv">
+      <h2>Send an Enquiry</h2>
+      <form id="cf">
+        <input id="cName" type="text" required placeholder="Full Name" aria-label="Full Name">
+        <input id="cPhone" type="tel" required placeholder="Phone Number" aria-label="Phone Number">
+        <input id="cCity" type="text" placeholder="City / Address (Optional)" aria-label="City or address">
+        <select id="cService" aria-label="Service">
+          <option>Cold Storage Installation</option><option>Ice Factory Installation</option><option>Cold Storage Repair</option><option>Cold Storage Maintenance</option><option>Ammonia Pipeline Work</option><option>System Upgrade</option><option>Annual Maintenance Contract (AMC)</option><option>Other</option>
+        </select>
+        <textarea id="cMsg" rows="5" placeholder="Tell us about your requirement..." aria-label="Message"></textarea>
+        <button class="btn wa" type="submit">💬 Send on WhatsApp</button>
+        <small>We only use your information to contact you regarding your enquiry.</small>
+      </form>
     </div>
-
   </div>
+</section>
+</main>
 
+<footer class="glass">
+  <div class="frow">
+    <a class="brand" href="#home"><img src="https://i.ibb.co/4ZJ1ZKwD/Chat-GPT-Image-Jun-27-2026-at-02-13-34-PM.png" alt="Rajesh Kumar Refrigeration Works"><span><b>Rajesh Kumar Refrigeration Works</b><small>Cold Storage &amp; Ice Factory Solutions</small></span></a>
+    <nav class="flinks"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+  </div>
+  <hr>
+  <div class="frow">
+    <div><p>📞 <a href="tel:+919936072321">+91 99360 72321</a></p><p>💬 <a href="https://wa.me/919936072321" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p></div>
+    <div><p>© 2026 Rajesh Kumar Refrigeration Works. All Rights Reserved.</p><p class="by">Designed &amp; Developed by <span>Kunal Maurya</span></p></div>
+  </div>
 </footer>
 
+<a id="wa" href="https://wa.me/919936072321?text=Hello%20Rajesh%20Kumar%20Refrigeration%20Works,%20I%20need%20more%20information." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 3C8.82 3 3 8.82 3 16.004c0 2.54.74 5.01 2.14 7.13L3 29l5.99-2.09A12.93 12.93 0 0016.004 29C23.18 29 29 23.18 29 16.004 29 8.82 23.18 3 16.004 3zm0 23.6a10.5 10.5 0 01-5.36-1.47l-.38-.23-3.56 1.24 1.2-3.46-.25-.4a10.55 10.55 0 1118.35-6.27c0 5.8-4.72 10.59-10.5 10.59zm5.8-7.9c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.59-.96-.85-1.61-1.89-1.8-2.21-.19-.32-.02-.49.14-.65.15-.15.32-.38.48-.57.16-.19.22-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71 0 1.6 1.17 3.15 1.33 3.37.16.22 2.29 3.49 5.54 4.89.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.76.27-1.41.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg></a>
+<button id="up" type="button" aria-label="Back to top">↑</button>
 
-    <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/919936072321?text=Hello%20Rajesh%20Kumar%20Refrigeration%20Works,%20I%20need%20more%20information."
-   target="_blank"
-   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl z-50 transition duration-300">
+<div id="pop" role="dialog" aria-modal="true" aria-labelledby="popT">
+  <div class="glass">
+    <button id="x" type="button" aria-label="Close">&times;</button>
+    <h2 id="popT">Service Enquiry</h2>
+    <p>Fill in your details and continue on WhatsApp.</p>
+    <form id="pf">
+      <input id="pName" type="text" placeholder="Full Name" required aria-label="Full Name">
+      <input id="pPhone" type="tel" placeholder="Phone Number" required aria-label="Phone Number">
+      <input id="pCity" type="text" placeholder="City / Address (Optional)" aria-label="City or address">
+      <input type="hidden" id="pService">
+      <button class="btn wa" type="submit">💬 Open WhatsApp &amp; Send</button>
+      <small>Your information is only used to contact you regarding your enquiry.</small>
+    </form>
+  </div>
+</div>
 
-  <!-- WhatsApp Icon -->
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 32 32"
-       fill="currentColor"
-       class="w-9 h-9">
-    <path d="M16.004 3C8.82 3 3 8.82 3 16.004c0 2.54.74 5.01 2.14 7.13L3 29l5.99-2.09A12.93 12.93 0 0016.004 29C23.18 29 29 23.18 29 16.004 29 8.82 23.18 3 16.004 3zm0 23.6a10.5 10.5 0 01-5.36-1.47l-.38-.23-3.56 1.24 1.2-3.46-.25-.4a10.55 10.55 0 1118.35-6.27c0 5.8-4.72 10.59-10.5 10.59zm5.8-7.9c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.59-.96-.85-1.61-1.89-1.8-2.21-.19-.32-.02-.49.14-.65.15-.15.32-.38.48-.57.16-.19.22-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71 0 1.6 1.17 3.15 1.33 3.37.16.22 2.29 3.49 5.54 4.89.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.76.27-1.41.19-1.53-.08-.13-.29-.21-.61-.37z"/>
-  </svg>
-
-</a>
-
-    <button id="topBtn" onclick="topFunction()">
-↑
-</button>
-    
-  </body>
+<script>
+(function(){
+  var NUM='919936072321',CO='Rajesh Kumar Refrigeration Works',$=function(id){return document.getElementById(id)};
+  function wa(t){location.assign('https://wa.me/'+NUM+'?text='+encodeURIComponent(t))}
+  // menu
+  var menu=$('menu'),links=$('links');
+  menu.addEventListener('click',function(){var o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+  links.addEventListener('click',function(){links.classList.remove('open');menu.setAttribute('aria-expanded',false)});
+  // popup
+  var pop=$('pop');
+  function close(){pop.classList.remove('open')}
+  document.querySelectorAll('[data-service]').forEach(function(b){b.addEventListener('click',function(){$('pService').value=b.dataset.service;pop.classList.add('open');$('pName').focus()})});
+  $('x').addEventListener('click',close);
+  pop.addEventListener('click',function(e){if(e.target===pop)close()});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  $('pf').addEventListener('submit',function(e){e.preventDefault();
+    wa('Hello '+CO+',\nName: '+$('pName').value+'\nPhone: '+$('pPhone').value+'\nCity / Address: '+($('pCity').value||'Not Provided')+'\nService Required: '+$('pService').value+'\nPlease provide me with more information and a quotation.');close()});
+  $('cf').addEventListener('submit',function(e){e.preventDefault();
+    wa('Hello '+CO+',\nName: '+$('cName').value+'\nPhone: '+$('cPhone').value+'\nCity / Address: '+($('cCity').value||'Not Provided')+'\nService Required: '+$('cService').value+'\nMessage:\n'+($('cMsg').value||'No additional message.'))});
+  // back to top
+  var up=$('up');
+  addEventListener('scroll',function(){up.classList.toggle('on',scrollY>300)},{passive:true});
+  up.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+  // pointer tilt + glow
+  document.querySelectorAll('.tilt').forEach(function(el){
+    el.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;
+      var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      el.style.setProperty('--ry',((x-.5)*12)+'deg');el.style.setProperty('--rx',((.5-y)*12)+'deg');
+      el.style.setProperty('--mx',(x*100)+'%');el.style.setProperty('--my',(y*100)+'%');el.style.setProperty('--glow',1)});
+    el.addEventListener('pointerleave',function(){el.style.setProperty('--rx','0deg');el.style.setProperty('--ry','0deg');el.style.setProperty('--glow',0)})});
+  // staggered reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+    var t=e.target,i=[].indexOf.call(t.parentNode.children,t);t.style.transitionDelay=(i%4*.12)+'s';t.classList.add('in');
+    setTimeout(function(){t.style.transitionDelay='0s'},1400);io.unobserve(t)})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
 </html>
