@@ -146,13 +146,52 @@ footer .by span{color:var(--b2);font-weight:500}
 #pop h2{font-size:30px;margin-bottom:6px}
 #pop p{color:var(--mute);margin:0 0 18px}
 #x{position:absolute;right:16px;top:12px;border:0;background:none;color:var(--ink);font-size:30px;cursor:pointer}
-@media (max-width:900px){.hero,.about,.contact{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.gal{columns:2}.pic{max-width:420px}}
+/* extra motion */
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+#glow{position:fixed;left:0;top:0;width:460px;height:460px;margin:-230px 0 0 -230px;z-index:-1;pointer-events:none;border-radius:50%;background:radial-gradient(circle,rgba(25,195,230,.28),transparent 65%);transition:opacity .4s;opacity:0}
+#bar{position:fixed;left:0;top:0;height:4px;width:100%;z-index:70;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--b2),var(--b1),var(--b3))}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 20px;border-radius:999px;margin-bottom:22px;font-weight:500;animation:rise 1s .1s both}
+.eyebrow b{color:var(--b2);display:inline-block;min-width:9ch}
+.swap{animation:swapin .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes swapin{from{opacity:0;transform:translateY(.7em) rotateX(-80deg);filter:blur(6px)}}
+.hero h1{animation:none}
+.w{display:inline-block;opacity:0;transform:translateY(.6em);filter:blur(10px);animation:wordin .9s var(--d,0s) cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes wordin{to{opacity:1;transform:none;filter:none}}
+.pic::before{content:"";position:absolute;inset:-14px;border-radius:38px;z-index:-1;opacity:.8;border:1px solid var(--edge);background:conic-gradient(from var(--a),var(--b2),var(--b1),var(--b3),var(--b2));box-shadow:0 0 60px rgba(25,195,230,.35);animation:ringspin 6s linear infinite}
+@keyframes ringspin{to{--a:360deg}}
+.flake{position:absolute;font-size:30px;color:var(--b2);pointer-events:none;animation:flk 8s ease-in-out infinite;text-shadow:0 0 18px var(--b2)}
+.flake:nth-of-type(1){left:38%;top:-8%}.flake:nth-of-type(2){left:-12%;bottom:26%;animation-delay:-3s;font-size:22px}.flake:nth-of-type(3){right:2%;top:2%;animation-delay:-5s;font-size:36px}
+@keyframes flk{50%{transform:translateY(-26px) rotate(180deg)}}
+.tilt:hover{box-shadow:0 22px 70px var(--shadow),0 0 0 1px var(--b2),0 0 44px rgba(25,195,230,.28),inset 0 1px 0 var(--edge)}
+.head h2::after{content:"";display:block;height:4px;width:0;border-radius:4px;margin-top:14px;background:linear-gradient(90deg,var(--b2),var(--b1),var(--b3));transition:width 1.2s .35s}
+.head.in h2::after{width:96px}
+.pills.rev div{animation-direction:reverse;animation-duration:42s}
+.btn{transform:translate(var(--tx,0px),var(--ty,0px))}
+.btn:hover{transform:translate(var(--tx,0px),calc(var(--ty,0px) - 3px)) scale(1.05)}
+.gal img{cursor:zoom-in}
+#lb{position:fixed;inset:0;z-index:60;display:none;place-items:center;padding:4vw;background:rgba(5,8,20,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);cursor:zoom-out}
+#lb.open{display:grid}
+#lb img{max-height:86vh;max-width:92vw;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);animation:pop .45s cubic-bezier(.2,.9,.3,1.3)}
+@media (hover:none){#glow{display:none}}
+/* scroll assembly */
+main{overflow-x:clip}
+.asm{will-change:translate,rotate,scale,opacity;transition:box-shadow .6s;border-radius:calc(24px * var(--q,1));outline:2px solid var(--b2)}
+.asm img,.asm .im{border-radius:calc(14px * var(--q,1))}
+.head.asm{outline:0}
+.asm.snap{box-shadow:0 18px 50px var(--shadow),0 0 0 2px var(--b2),0 0 70px rgba(25,195,230,.7),inset 0 1px 0 var(--edge)}
+.head.asm.snap{box-shadow:none}
+/* hero frame: no square backdrop behind the rounded glass */
+.pic .glass,.chip{backdrop-filter:none;-webkit-backdrop-filter:none}
+.pic .glass{background:var(--glass);isolation:isolate}
+@media (max-width:900px){.hero,.about,.contact{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.gal{columns:2}.pic{max-width:420px;margin:0 auto}}
 @media (max-width:640px){#menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:calc(100% + 10px);flex-direction:column;padding:14px;border-radius:24px;background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}.links.open{display:flex}.grid2,.why{grid-template-columns:1fr}.gal{columns:1}.brand small{display:none}.chip.a{left:0}.chip.b{right:0}}
-@media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.rv,.w{opacity:1;transform:none;filter:none}.head h2::after{width:96px}#glow{display:none}}
 </style>
 </head>
 <body>
 <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="fx" aria-hidden="true"></canvas><div id="glow" aria-hidden="true"></div><div id="bar" aria-hidden="true"></div>
 
 <header class="top glass">
   <a class="brand" href="#home"><img src="https://i.ibb.co/4ZJ1ZKwD/Chat-GPT-Image-Jun-27-2026-at-02-13-34-PM.png" alt="Rajesh Kumar Refrigeration Works"><span><b>Rajesh Kumar Refrigeration Works</b><small>Cold Storage &amp; Ice Factory Solutions</small></span></a>
@@ -163,12 +202,14 @@ footer .by span{color:var(--b2);font-weight:500}
 <main>
 <section class="hero" id="home" style="padding-top:9vh">
   <div>
+    <div class="eyebrow glass">❄ Experts in <b id="rot">Cold Storage</b></div>
     <h1>Cold Storage &amp; <span class="grad">Ice Factory</span> Solutions</h1>
     <p>From complete cold storage and ice factory installations to maintenance, repairs, and system upgrades, we deliver dependable refrigeration solutions with a commitment to quality, efficiency, and long-term performance. Contact us today for expert assistance.</p>
     <a class="btn wa" target="_blank" rel="noopener noreferrer" href="https://wa.me/919936072321?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Cold%20Storage%20or%20Ice%20Factory%20installation%2C%20repair%20or%20maintenance."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.83 11.83 0 0012.04 0C5.4 0 .04 5.36.04 12c0 2.11.55 4.18 1.6 6.01L0 24l6.16-1.62A11.97 11.97 0 0012.04 24C18.68 24 24 18.64 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.04 21.8c-1.87 0-3.7-.5-5.3-1.45l-.38-.22-3.65.96.97-3.56-.24-.37A9.72 9.72 0 012.3 12c0-5.37 4.37-9.74 9.74-9.74 2.6 0 5.05 1.01 6.89 2.85A9.68 9.68 0 0121.78 12c0 5.37-4.37 9.8-9.74 9.8z"/></svg>WhatsApp Us</a>
   </div>
   <div class="pic">
     <div class="glass tilt"><img src="https://i.ibb.co/mZT01Y1/manik.jpg" alt="Cold storage work by Rajesh Kumar Refrigeration Works"></div>
+    <span class="flake">❄</span><span class="flake">❄</span><span class="flake">❄</span>
     <span class="chip glass a">Cold Storage</span><span class="chip glass b">Ice Factory</span>
   </div>
 </section>
@@ -176,6 +217,10 @@ footer .by span{color:var(--b2);font-weight:500}
 <div class="pills" aria-hidden="true"><div>
 <span>Cold storage installation</span><span>Ice factory setup</span><span>Ammonia pipeline work</span><span>Automatic level controllers</span><span>Bunker coil accumulators</span><span>Repair &amp; maintenance</span><span>Annual maintenance contracts</span>
 <span>Cold storage installation</span><span>Ice factory setup</span><span>Ammonia pipeline work</span><span>Automatic level controllers</span><span>Bunker coil accumulators</span><span>Repair &amp; maintenance</span><span>Annual maintenance contracts</span>
+</div></div>
+<div class="pills rev" aria-hidden="true"><div>
+<span>Preventive maintenance</span><span>System upgrades</span><span>Compressor protection</span><span>Energy efficient systems</span><span>Free consultation</span><span>Quality workmanship</span><span>Timely service</span>
+<span>Preventive maintenance</span><span>System upgrades</span><span>Compressor protection</span><span>Energy efficient systems</span><span>Free consultation</span><span>Quality workmanship</span><span>Timely service</span>
 </div></div>
 
 <section id="services">
@@ -299,6 +344,7 @@ footer .by span{color:var(--b2);font-weight:500}
   </div>
 </div>
 
+<div id="lb" role="dialog" aria-label="Photo preview"><img alt=""></div>
 <script>
 (function(){
   var NUM='919936072321',CO='Rajesh Kumar Refrigeration Works',$=function(id){return document.getElementById(id)};
@@ -334,6 +380,64 @@ footer .by span{color:var(--b2);font-weight:500}
     var t=e.target,i=[].indexOf.call(t.parentNode.children,t);t.style.transitionDelay=(i%4*.12)+'s';t.classList.add('in');
     setTimeout(function(){t.style.transitionDelay='0s'},1400);io.unobserve(t)})},{threshold:.12});
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  // ---- extra motion ----
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar=$('bar'),bl=document.querySelector('.blobs');
+  addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';bl.style.setProperty('--sy',scrollY)},{passive:true});
+  // lightbox
+  var lb=$('lb'),lbi=lb.querySelector('img');
+  document.querySelectorAll('.gal img').forEach(function(im){im.addEventListener('click',function(){lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('open')})});
+  lb.addEventListener('click',function(){lb.classList.remove('open')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+  // magnetic buttons
+  document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;var r=b.getBoundingClientRect();
+      b.style.setProperty('--tx',((e.clientX-r.left)/r.width-.5)*14+'px');b.style.setProperty('--ty',((e.clientY-r.top)/r.height-.5)*10+'px')});
+    b.addEventListener('pointerleave',function(){b.style.setProperty('--tx','0px');b.style.setProperty('--ty','0px')})});
+  if(rm){$('fx').style.display='none';return}
+  // headline: word-by-word blur-in
+  var k=0;
+  (function wrap(node,cls){[].slice.call(node.childNodes).forEach(function(c){
+    if(c.nodeType===3){var f=document.createDocumentFragment();
+      c.textContent.split(/(\s+)/).forEach(function(t){if(!t.trim()){f.appendChild(document.createTextNode(t));return}
+        var s=document.createElement('span');s.className='w'+(cls?' '+cls:'');s.style.setProperty('--d',(.25+k++*.13)+'s');s.textContent=t;f.appendChild(s)});
+      c.replaceWith(f)}
+    else if(c.classList&&c.classList.contains('grad')){c.classList.remove('grad');wrap(c,'grad')}})})(document.querySelector('.hero h1'),'');
+  // rotating specialty
+  var words=['Cold Storage','Ice Factory','Ammonia Piping','Level Controllers','Repair & AMC'],ri=0,rot=$('rot');
+  setInterval(function(){ri=(ri+1)%words.length;rot.classList.remove('swap');void rot.offsetWidth;rot.textContent=words[ri];rot.classList.add('swap')},2600);
+  // cursor glow
+  var gl=$('glow');
+  addEventListener('pointermove',function(e){gl.style.opacity=1;gl.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)'});
+  // falling frost
+  var cv=$('fx'),cx=cv.getContext('2d'),W,H,P=[],mx=-999,my=-999,light=matchMedia('(prefers-color-scheme: light)').matches;
+  function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener('resize',rs);
+  for(var i=0;i<(innerWidth<700?34:85);i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2.6+.8,v:Math.random()*.7+.25,s:Math.random()*6.28,a:Math.random()*.5+.25});
+  addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY});
+  (function f(){cx.clearRect(0,0,W,H);cx.fillStyle=light?'#4d8dff':'#ffffff';
+    P.forEach(function(p){p.s+=.012;p.y+=p.v;p.x+=Math.sin(p.s)*.4;var dx=p.x-mx,dy=p.y-my;if(dx*dx+dy*dy<9000){p.x+=dx*.03;p.y+=dy*.03}
+      if(p.y>H+6){p.y=-6;p.x=Math.random()*W}cx.globalAlpha=p.a;cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fill()});
+    requestAnimationFrame(f)})();
+  // ---- scroll assembly: parts slide in from both sides and snap together ----
+  var map=[['.grid2 > .card',['l','r']],['.about .duo .glass',['l','r']],['.about > div:last-child',['r']],['.why > .glass',['l','l','r','r']],
+    ['.gal figure',['l','l','u','u','r','r']],['.contact > .glass',['l','r']],['.head',['l'],.28]],els=[];
+  map.forEach(function(m){document.querySelectorAll(m[0]).forEach(function(e,i){e._dir=m[1][i%m[1].length];e._f=m[2]||1;e.classList.remove('rv');e.classList.add('asm');els.push(e)})});
+  function measure(){els.forEach(function(e){var t=e.style.translate,r=e.style.rotate,s=e.style.scale;
+    e.style.translate='none';e.style.rotate='none';e.style.scale='none';e._top=e.getBoundingClientRect().top+scrollY;
+    e.style.translate=t;e.style.rotate=r;e.style.scale=s})}
+  var tick=false;
+  function upd(){tick=false;var vh=innerHeight;
+    els.forEach(function(e){
+      var p=Math.min(1,Math.max(0,(vh*.98-(e._top-scrollY))/(vh*.5))),q=1-Math.pow(1-p,4),
+          side=e._dir==='l'?-1:e._dir==='r'?1:0,d=Math.min(innerWidth*.85,720)*e._f;
+      e.style.translate=(side*(1-q)*d)+'px '+((1-q)*(side?50:130))+'px';
+      e.style.rotate=(side*(1-q)*9)+'deg';e.style.scale=.88+.12*q;e.style.setProperty('--q',q.toFixed(3));e.style.opacity=Math.min(1,p*2.5);
+      if(p>=1&&!e._on){e._on=1;e.classList.add('snap');setTimeout(function(){e.classList.remove('snap')},650)}else if(p<.9)e._on=0})}
+  function req(){if(!tick){tick=true;requestAnimationFrame(upd)}}
+  function again(){measure();req()}
+  again();addEventListener('scroll',req,{passive:true});addEventListener('resize',again);addEventListener('load',again);
+  setTimeout(again,1500);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(again);
+  if(window.ResizeObserver)new ResizeObserver(again).observe(document.body);
 })();
 </script>
 </body>
